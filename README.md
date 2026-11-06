@@ -1,11 +1,14 @@
 # Golden Gate UI
 
-One design skill for integrated layouts, calm content, and restrained Liquid Glass across web, Electron/Tauri, SwiftUI, and AppKit. It preserves the application's stack, behavior, and product identity.
+One design skill for eye-catching Golden Gate interfaces with integrated layouts, clear task flow, responsive interaction, and restrained Liquid Glass across web, Electron/Tauri, SwiftUI, and AppKit. It preserves the application's stack, behavior, and product identity.
 
-The skill is **`macos-golden-gate-design`**, version **2.0.0**. [Read the skill](skills/macos-golden-gate-design/SKILL.md) or the [comparison and design decisions](docs/comparison.md).
+The skill is **`macos-golden-gate-design`**, version **2.1.0**. [Read the skill](skills/macos-golden-gate-design/SKILL.md), the [comparison](docs/comparison.md), or the [clarity, UX and performance audit](docs/audit-2.1.md).
 
 ## What changed
 
+- Made visual character an explicit goal: deliberate focal points, expressive color/type/imagery, and purposeful motion, with quieter briefs respected.
+- Added task-flow, feedback and recovery checks, plus measured web/native performance guidance.
+- Clarified that routine visual choices do not need another approval pause.
 - Kept the original cross-platform scope and meaningful-card exceptions.
 - Added concrete sidebar, toolbar, table, form, inspector, and dialog patterns.
 - Made selection, focus, keyboard access, overflow, and responsive behavior explicit.
@@ -43,7 +46,7 @@ The symlink keeps installation and checkout in sync. Restart or begin a new agen
 
 ## Use
 
-- “Use $macos-golden-gate-design to restyle this React app. Keep its existing navigation and branding.”
+- “Use $macos-golden-gate-design to make this React app eye-catching. Keep its existing navigation and branding.”
 - “Review this SwiftUI window for Golden Gate design issues; do not modify code.”
 - “Make this Electron interface feel integrated and less boxed. Preserve shortcuts and window controls.”
 - “Create a Golden Gate-inspired mockup from this screenshot.”

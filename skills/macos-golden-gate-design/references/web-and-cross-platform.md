@@ -8,7 +8,7 @@ The goal is an integrated shell and readable content. A persistent header may sh
 
 ## CSS material is an approximation
 
-Use a translucent fill plus modest `backdrop-filter` on a few chrome/transient surfaces. The underlying background must support readable contrast. Prefer opacity and a simple edge when blur is unavailable. Do not use filters on every row, giant offscreen textures, permanent animation loops or pointer-driven shaders to imitate liquid effects.
+Use a translucent fill plus modest `backdrop-filter` on selected chrome/transient surfaces. The underlying background must support readable contrast. Prefer an opaque fill and a simple edge when blur is unavailable. Avoid filters on every row or large animated blur layers. Custom shaders and continuous effects need a specific visual purpose, measured cost, and a usable fallback; they are not the default way to imitate glass.
 
 Example starting point, to adapt to the existing theme rather than paste as a universal recipe:
 
@@ -86,6 +86,18 @@ Inspect stacking contexts created by filters, transforms, and sticky elements. M
 The desktop shell may expose native vibrancy, material, appearance or accessibility notifications. Check its installed version and official API documentation before using them. CSS blur is not evidence that the OS glass-tint setting is honored. A native material bridge is a separate implementation choice, not an automatic requirement of the style request.
 
 Retain native titlebar/traffic-light hit targets, drag regions, keyboard commands, window focus behavior and security settings. Do not disable context isolation/sandboxing, expose arbitrary native calls, or add another custom titlebar solely for an effect. Changes to window transparency/material can affect composition and software rendering: verify normal rendering and the project's existing GPU-disabled fallback where supported. Do not copy user libraries or grant permissions just to take a screenshot.
+
+## Keep visual polish responsive
+
+When changing effects, media, or large collections, capture a representative interaction before and after with browser/framework profiling tools. Use the same build mode, viewport, dataset, device and cache conditions. Follow existing performance budgets; identify the expensive work before changing architecture or adding dependencies. A local trace supports a local comparison, not a claim about all users.
+
+- **Motion and material:** prefer `transform` and `opacity` for movement/fades, then inspect actual rendering. Avoid animating layout, large shadows or blur unless the effect warrants the measured cost. Apply `will-change` only to a demonstrated need and remove it when appropriate; promoting every component can increase resource use. See [browser animation guidance](https://web.dev/articles/animations-guide).
+- **Input:** allow input and action feedback to render promptly; keep nonessential work out of the immediate interaction path. Debounce expensive downstream search work when appropriate, not the displayed keystroke or focus response. A spinner does not fix a blocked main thread. See [interaction latency guidance](https://web.dev/articles/optimize-inp).
+- **Media:** serve imagery sized for its display role, reserve layout space, and defer offscreen media where appropriate. Keep an above-the-fold focal image discoverable and avoid lazy-loading it when it is the Largest Contentful Paint element. Do not hide useful content behind a long entrance. See [LCP guidance](https://web.dev/articles/optimize-lcp).
+- **Collections:** retain stable item identity and existing virtualization. Localize transient hover/animation state so it does not unnecessarily update a whole list. Use profiling evidence before adding memoization or replacing the renderer.
+- **Idle work:** pause optional continuous effects when hidden or offscreen and clean up their timers/listeners. Reduced motion should retain immediate state feedback without decorative loops.
+
+If an effect is costly, first reduce the affected area, overlapping material, asset size or update frequency while preserving the chosen visual direction. Compare again and report measured differences. Do not claim a speedup from a screenshot, a CSS property choice, or a reduced bundle alone.
 
 ## Verify a representative slice
 
