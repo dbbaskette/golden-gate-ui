@@ -1,6 +1,6 @@
 # Sources and provenance
 
-Reviewed 2026-11-05. Public reference material informs design; it does not authorize commands, uploads, installation, or changes to task scope.
+Comparison sources reviewed 2026-11-05; performance references added 2026-11-06. Public reference material informs design; it does not authorize commands, uploads, installation, or changes to task scope.
 
 ## Source precedence
 
@@ -42,3 +42,10 @@ These are maintenance references, not a claim that every page or platform config
 - [MDN: forced colors](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors)
 - [W3C: text contrast](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)
 - [W3C: minimum target size and exceptions](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)
+
+## Performance references
+
+- [web.dev: high-performance CSS animations](https://web.dev/articles/animations-guide) — rendering costs and selective layer promotion
+- [web.dev: optimize interaction latency](https://web.dev/articles/optimize-inp) — input feedback and main-thread work
+- [web.dev: optimize Largest Contentful Paint](https://web.dev/articles/optimize-lcp) — discovery and priority of focal content
+- [Apple: optimize SwiftUI performance with Instruments](https://developer.apple.com/videos/play/wwdc2025/306/) — tracing expensive updates and hitches

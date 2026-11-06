@@ -23,4 +23,12 @@ After choosing standard components, use these checks for a genuinely custom cont
 
 These are implementation decision points, not a requirement to retrofit custom glass into system toolbars. Inspect SDK declarations before writing a version-specific example; do not invent a “Golden Gate” API.
 
+## Visual character and performance
+
+Express the product through content, imagery, accent, hierarchy and intentional interaction while keeping standard control behavior. Native components still allow a distinctive composition. Follow a quiet utility brief or exact reference when requested; visual polish should support the task's density.
+
+For changed effects, large collections or reported slowness, profile representative scrolling, resizing and actions in a consistent build/device configuration. Use Instruments to distinguish expensive view updates from rendering hitches. In SwiftUI, investigate broad state dependencies and expensive work repeated in `body`; move or cache demonstrated costly work without serving stale content. See [Apple's Instruments walkthrough](https://developer.apple.com/videos/play/wwdc2025/306/).
+
+Preserve stable row identity and efficient standard collection behavior. Reduce redundant glass effects or affected area before abandoning the visual direction. Avoid continuous decorative work in inactive/hidden windows; preserve required background app behavior. Compare before/after traces and report the scenario and limits, not an unmeasured claim of smoothness.
+
 Keep sidebar/inspector collapse and resize behavior, toolbar overflow, native menu commands, VoiceOver and keyboard navigation. Verify light/dark, active/inactive, compact/default/wide, Reduce Transparency, Increase Contrast and Reduce Motion to the degree relevant to the changed surface. Report untested combinations rather than treating one static preview as native acceptance.

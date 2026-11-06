@@ -1,4 +1,28 @@
-# Version 2.0.0 validation
+# Skill validation
+
+## Version 2.1.0 — 2026-11-06
+
+This revision changes instructions and UI metadata. The prior installation commands, CSS examples and implicit invocation policy are unchanged; their successful 2.0.0 evidence is reused.
+
+Checks for 2.1.0:
+
+- Skill-creator validation and parsed YAML metadata, including the new version and invocation prompt.
+- Local Markdown targets and fragment anchors; reachability of every bundled reference.
+- Git whitespace/diff review and installed-symlink identity against the checkout.
+- Manual walkthroughs for the scenarios below, checking that all selected references give consistent direction.
+
+| Request | Reviewed behavior |
+| --- | --- |
+| Eye-catching media workspace | Select a product-specific visual treatment; use real previews and responsive controls; preserve task access and reduced-effects appearance |
+| Quiet native settings utility | Honor the restrained brief, keep standard controls, avoid a forced hero, animation or new font dependency |
+| Dense data table with strong visual character | Keep meaningful rows/columns, selection and virtualization; use hierarchy and accent without inventing decorative data |
+| Search input becomes slow after a visual refresh | Compare equivalent traces, preserve immediate input feedback, investigate expensive work before speculative caching or renderer replacement |
+| Review only | Return located findings and improvements without editing the target app; distinguish defects from subjective design opportunities |
+| Cosmetic refresh with missing retry support | Identify the recovery gap without inventing a backend capability or making unsupported success claims |
+
+These are package checks and manual instruction reviews. No speedup or downstream visual-quality improvement has been measured in an application. The tested source is the version 2.1.0 tree in the PR introducing this section; publication and merge do not change that evidence when file contents remain identical.
+
+## Version 2.0.0 — retained evidence
 
 This release changes skill documentation and packaging. It does not ship a UI application or an SDK integration. Validation runs locally on macOS; no VM or hosted CI is needed for these documentation checks.
 

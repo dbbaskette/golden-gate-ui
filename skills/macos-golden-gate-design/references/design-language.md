@@ -1,5 +1,24 @@
 # Visual language
 
+## Visual direction
+
+For design and restyling work, aim for a result people notice and want to use. Choose the emphasis from the subject, audience, content, and existing brand. A short direction such as “image-led workspace with warm copper selection and crisp editorial headings” gives decisions a common purpose; do not reuse it as a preset.
+
+Pick a focal point or a small family of coordinated treatments. Shape the surrounding density and contrast so attention has somewhere to land. Useful approaches depend on the surface:
+
+| Surface | Possible source of character | Constraint |
+| --- | --- | --- |
+| Content browser or media tool | Strong previews, thoughtful cropping, deliberate rhythm and selection | Preserve scan speed, item identity and actions |
+| Data workspace | Clear information graphics, intentional numeric typography, confident accent | Keep comparisons honest and dense data readable |
+| Settings or small utility | Refined alignment, icon consistency, color and responsive controls | Keep common tasks compact and discoverable |
+| Introductory or showcase screen | Distinctive imagery, display typography or an interactive demonstration | Let people reach the primary action without waiting for a reveal |
+
+These are options, not templates or a requirement to add features. Use authentic product content and existing assets when they fit. Avoid generic metric tiles, decorative charts, or a stock gradient used as a substitute for a direction. Preserve an explicitly supplied visual reference or restrained brief.
+
+Use stronger color, typography, contrast, texture or imagery where it earns attention. Keep platform typography for native controls; existing licensed brand fonts may carry web display roles. Do not make custom font downloads a prerequisite. Stable content can be visually rich without putting blur behind body text.
+
+Motion should clarify cause and effect: selection, disclosure, movement, or a confirmed outcome. Keep it interruptible and let the user act immediately. A brief entrance can suit a showcase; repeated entrances on every row or route can become friction in daily use. Preserve composition, color and hierarchy when motion or transparency is reduced.
+
 ## Integrated structure
 
 Golden Gate is a refinement of the Mac's productivity UI, not maximal transparency. The composition should explain where navigation ends and content begins. Distinct regions can share an edge and a hairline divider without acquiring their own rounded frames or shadows.
@@ -44,15 +63,25 @@ Use semantic roles rather than a mandatory fixed palette. A starting light theme
 
 Use accent for selection, progress and a small number of important commands. Use informative icon colors without turning all peer regions into different-colored tiles. Status is also expressed in text or shape. Preserve brand colors unless the user asks for a change.
 
-Prefer the platform's system text where available, with a deliberate hierarchy and useful density. On the web, use a cross-platform system-font stack rather than downloading or redistributing Apple's proprietary fonts. Do not shrink content until it fits; reflow, overflow commands appropriately or use existing pane-collapse behavior.
+Prefer platform text styles for native controls and a deliberate hierarchy with useful density. On the web, retain suitable licensed brand typography or use a cross-platform system-font stack; never download or redistribute Apple's proprietary fonts for the effect. Do not shrink content until it fits; reflow, overflow commands appropriately or use existing pane-collapse behavior.
 
 Corner dimensions are not universal: component radii, spacing and density depend on the framework, screen and control. Use tighter, coordinated corners and reserve more rounded shapes for compact controls/transient surfaces. Avoid a capsule around every icon and an inner rounded window around the application.
 
 ## State and access
 
-Check populated, empty, loading and failure states without moving controls unexpectedly. Text, selected state, focus, important actions and pane ownership must remain understandable when transparency and motion are reduced. Motion should respond to an action rather than play continuously.
+Check populated, empty, loading and failure states without moving controls unexpectedly. Text, selected state, focus, important actions and pane ownership must remain understandable when transparency and motion are reduced. Avoid continuous decorative motion in task-focused screens.
 
 Use the target's real support for Reduce Transparency, Increase Contrast, Reduce Motion, appearance and inactive windows. Where an environment cannot observe a preference, choose a readable opaque fallback or existing app preference; never claim automatic OS integration without it. Keep programmatic labels, focus order and keyboard behavior intact.
+
+## Task flow and feedback
+
+Inspect the primary task from arrival through action to its result. Identify the next useful action, what the user needs to decide, and how they know it worked. Use progressive disclosure for secondary detail while keeping essential actions visible. Distinguish an empty collection from no search results and from a loading failure; each needs a different next step.
+
+On interaction, show prompt pressed/selected/busy feedback without claiming completion prematurely. Tie progress and success to real state. Preserve entered data on recoverable errors, explain disabled actions when the reason is unclear, and keep retry or cancellation available when the application supports it. Decorative animation must not delay input or mask a failed operation.
+
+Keep search, filters, scroll position and selection stable when the task benefits from continuity. In a dense workspace, distinguish the current row, selected objects and the target of a toolbar command. Keep established confirmation or undo behavior for consequential actions. If recovery or persistence requires new product/backend behavior, report the gap separately instead of inventing a working control in a style refresh.
+
+For a review, walk this path and report friction. For implementation, fix the authorized surface and preserve the existing workflow unless redesign is requested.
 
 ## Type, symbols, and interface copy
 
@@ -64,4 +93,4 @@ Write actions as concrete outcomes: “Save changes” or “Retry upload” rat
 
 ## Final critique
 
-Remove the material effects mentally: does the interface still make sense? If not, fix structure. Then remove one unnecessary wrapper or effect rather than adding another to solve the contrast problem.
+Check two qualities independently: can someone complete the task, and is the intended visual character apparent? If the result feels generic, improve the focal point, content, typography or composition. If it feels noisy, reduce competing accents or effects. Disable blur and motion to verify that meaning and character survive. Do not polish away the distinctive treatment merely to make everything quieter.
